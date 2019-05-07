@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="style.css"/>
+    </head>
+    <body>
+      <title>Logo Game</title>
+      <center><h1>Logo Guessing Game</h1></center>
+     
+      <div id="test"></div>
+      <div id="all">
+     <center>
+       <br><br><br><br>
+       <div id="beggin"><button  id="x" onclick="q1()">Begin</button></div>
+      <div id="images"></div><br><div id="medium"></div><br><div id="butt"></div></center>
+
+      </div>
+      <br><br><br>
+      <br><br>
+      <center><div id="how"><h1>How to play</h1>
+        <h2>Click guess after you see the logo, type your guess and go to the next question. At the very end you will get a score. Good Luck!</h2></div></center>
+      <div id="scores"></div>
+      
+		<style>button{
+  width: 300px;
+  height: 50px;
+  background-color: blue;
+  color: white;
+  border: black 5px solid;
+  border-radius: 8px;
+   -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  font-size: 20px;
+}
+button:hover{
+background-color: #4286f4;
+  color: black;
+  font-size: 23px;
+}
+#comment{
+  color: white;
+  background-color: black;
+}
+html{
+background-image: url("http://www.pixelstalk.net/wp-content/uploads/2016/11/Free-Calm-Picture.jpg");
+  background-repeat: no-repeat;
+}</style>
+      <script>
+var correct = 0;
+
+//complete and score
+
+
+//1
+function q1(){
+  document.getElementById("how").innerHTML = "";
+  document.getElementById("beggin").innerHTML = "";
+document.getElementById("images").innerHTML = "<img src='https://lh3.googleusercontent.com/_RFdPjhOp11bLphrAS_qR2nNM19ZRalcYc1vKQ1_WIH2o4QYL-Yb7fAcoI7pUaxrCxB6kBT1-rv43gUFOvRuBTPCpdO82tCIdLFKo2RQOGscEUQbF2aX3UgpnRqVMqoK0VH9odfThiKL3Gk9Gs_yChUXmnoMmvqyDxEjvUdXlF62yYOV8NSAYlonutX1IV_XJcgXAC6T8o3VgG6I-2uaR_AD2RkViDx_W8_AYccrK78KRaMzrKPZxFGcva3MOIcW6hnRxwuDQaIf41gLQ3W-vZ0wk8fp8XkA2RIRpO-TXJZlIVIuwqlm-am7OdUTBjacnsrIDt5iWyVK_UwfLM5U0lHaT2eRZy_OIR0FGy32_iibSW0jZM8bzJzqild0cdP81Begf_PBQIjbb2wZbMQU7gZ-jEt5cVXZl9yyuxBqaGamloKpSBF_wGdo4veVkFV3lljvJ83OuQgfjsFfzyVL9seaPMF3A5tMZcoqWTh3J_uRGsDToo2k19lFrlOM4T2As0oc6u_qNRHqT5Kz-Z1hgjHQJU86KCNhQzHr9tPjGGHKWMp2W_xg058I3GWMaFWytEJqGPG8PdZrHJq9s1Ana6v49poMfBoZLq-PAHTZDshs4VyeOCW2ks5g9gLxWNFOLTZKEBUptuZdSR1d22-lGD8FKFNoXlk=w199-h129-no'height='200' width='200'><br><br><br><button onclick='oneg()'>Guess</button>";
+}
+function oneg(){
+  document.getElementById("images").innerHTML = "";
+   var con  = confirm("Are you sure");
+  if(con == true){
+ var answer = prompt("What is your guess");
+  if (answer =="starbucks") { 
+  correct = correct + 1;
+    document.getElementById("butt").innerHTML = "<button onclick='q2()'>Next Question</button";
+  }}
+  
+  if (answer != "starbucks"){
+document.getElementById("butt").innerHTML = "<button onclick='q2()'>Next Question</button>";
+  }
+}
+//2
+function q2(){
+  document.getElementById("butt").innerHTML = "";
+document.getElementById("images").innerHTML = "<img src='https://cdn.glitch.com/ff13a966-1e95-415c-a609-8907cd83a3af%2FScreen%20Shot%202019-03-11%20at%202.45.30%20PM.png?1552330365696'height='200' width='200'><br><br><br><button onclick='twog()'>Guess</button>";
+}
+function twog(){
+   document.getElementById("images").innerHTML = "";
+ var answer = prompt("What is your guess");
+  if (answer =="amazon") { 
+  correct = correct + 1;
+    document.getElementById("butt").innerHTML = "<button onclick='q3()'>Next Question</button";
+  }
+  if (answer != "amazon"){
+document.getElementById("butt").innerHTML = "<button onclick='q3()'>Next Question</button>";
+  }
+}
+//3
+function q3(){
+  document.getElementById("butt").innerHTML = "";
+document.getElementById("images").innerHTML = "<img src='https://cdn.glitch.com/ff13a966-1e95-415c-a609-8907cd83a3af%2Fapple.png?1552437734471'height='200' width='200'><br><br><br><button onclick='threeg()'>Guess</button>";
+}
+function threeg(){
+    document.getElementById("images").innerHTML = "";
+ var answer = prompt("What is your guess");
+  if (answer =="apple") { 
+  correct = correct + 1;
+    document.getElementById("butt").innerHTML = "<button onclick='q4()'>Next Question</button";
+  }
+  if (answer != "apple"){
+document.getElementById("butt").innerHTML = "<button onclick='q4()'>Next Question</button>";
+  }
+}
+//4
+function q4(){
+  document.getElementById("butt").innerHTML = "";
+document.getElementById("images").innerHTML = "<img src='https://cdn.glitch.com/ff13a966-1e95-415c-a609-8907cd83a3af%2FScreen%20Shot%202019-03-11%20at%202.46.09%20PM.png?1552330368512'height='200' width='200'><br><br><br><button onclick='fourg()'>Guess</button>";
+}
+function fourg(){
+   document.getElementById("images").innerHTML = "";
+ var answer = prompt("What is your guess");
+  if (answer =="epic games") { 
+  correct = correct + 1;
+    document.getElementById("butt").innerHTML = "<button onclick='q5()'>Next Question</button";
+  }
+  if (answer != "epic games"){
+document.getElementById("butt").innerHTML = "<button onclick='q5()'>Next Question</button>";
+  }
+}
+//5
+function q5(){
+  document.getElementById("butt").innerHTML = "";
+document.getElementById("images").innerHTML = "<img src='https://cdn.glitch.com/ff13a966-1e95-415c-a609-8907cd83a3af%2FScreen%20Shot%202019-03-11%20at%202.46.34%20PM.png?1552330370539' height='200' width='200'><br><br><br><button onclick='fiveg()'>Guess</button>";
+}
+function fiveg(){
+   document.getElementById("images").innerHTML = "";
+ var answer = prompt("What is your guess");
+  if (answer =="google") { 
+  correct = correct + 1;
+    document.getElementById("butt").innerHTML = "<button onclick='q6()'>Next Question</button";
+  }
+  if (answer != "google"){
+document.getElementById("butt").innerHTML = "<button onclick='q6()'>Next Question</button>";
+  }
+}
+//6
+function q6(){
+  document.getElementById("butt").innerHTML = "";
+document.getElementById("images").innerHTML = "<img src='https://cdn.glitch.com/ff13a966-1e95-415c-a609-8907cd83a3af%2FScreen%20Shot%202019-03-11%20at%202.46.54%20PM.png?1552330372021'height='200' width='200'><br><br><br><button onclick='sixg()'>Guess</button>";
+}
+function sixg(){
+   document.getElementById("images").innerHTML = "";
+ var answer = prompt("What is your guess");
+  if (answer =="ikea") { 
+  correct = correct + 1;
+    document.getElementById("butt").innerHTML = "<button onclick='q7()'>Next Question</button";
+  }
+  if (answer != "ikea"){
+document.getElementById("butt").innerHTML = "<button onclick='q7()'>Next Question</button>";
+  }
+}
+//7
+function q7(){
+  document.getElementById("butt").innerHTML = "";
+document.getElementById("images").innerHTML = "<img src='https://cdn.glitch.com/ff13a966-1e95-415c-a609-8907cd83a3af%2Fmcy%20Ds.png?1552437811583'height='200' width='200'><br><br><br><button onclick='seveng()'>Guess</button>";
+}
+function seveng(){
+    document.getElementById("images").innerHTML = "";
+ var answer = prompt("What is your guess");
+  if (answer =="mcdonalds") { 
+  correct = correct + 1;
+    document.getElementById("butt").innerHTML = "<button onclick='q8()'>Next Question</button";
+  }
+  if (answer != "mcdonalds"){
+document.getElementById("butt").innerHTML = "<button onclick='q8()'>Next Question</button>";
+  }
+}
+//8
+function q8(){
+  document.getElementById("butt").innerHTML = "";
+document.getElementById("images").innerHTML = "<img src='https://cdn.glitch.com/ff13a966-1e95-415c-a609-8907cd83a3af%2FScreen%20Shot%202019-03-11%20at%202.47.36%20PM.png?1552330361144'height='200' width='200'><br><br><br><button onclick='eightg()'>Guess</button>";
+}
+function eightg(){
+   document.getElementById("images").innerHTML = "";
+ var answer = prompt("What is your guess");
+  if (answer =="m&m's") { 
+  correct = correct + 1;
+    document.getElementById("butt").innerHTML = "<button onclick='q9()'>Next Question</button";
+  }
+  if (answer != "m&m's"){
+document.getElementById("butt").innerHTML = "<button onclick='q9()'>Next Question</button>";
+  }
+}
+//9
+function q9(){
+  document.getElementById("medium").innerHTML = "";
+  document.getElementById("butt").innerHTML = "";
+document.getElementById("images").innerHTML = "<img src='https://cdn.glitch.com/ff13a966-1e95-415c-a609-8907cd83a3af%2FScreen%20Shot%202019-03-11%20at%202.47.55%20PM.png?1552330362557'height='200' width='200'><br><br><br><button onclick='nineg()'>Guess</button>";
+}
+function nineg(){
+   document.getElementById("images").innerHTML = "";
+ var answer = prompt("What is your guess");
+  if (answer =="windows") { 
+  correct = correct + 1;
+    document.getElementById("butt").innerHTML = "<button onclick='q10()'>Next Question</button";
+  }
+  if (answer != "windows"){
+document.getElementById("butt").innerHTML = "<button onclick='q10()'>Next Question</button>";
+  }
+}
+//10
+function q10(){
+  document.getElementById("butt").innerHTML = "";
+document.getElementById("images").innerHTML = "<img src='https://cdn.glitch.com/ff13a966-1e95-415c-a609-8907cd83a3af%2FScreen%20Shot%202019-03-11%20at%202.48.22%20PM.png?1552330364339'height='200' width='200'><br><br><br><button onclick='teng()'>Guess</button>";
+}
+
+function teng(){
+    document.getElementById("images").innerHTML = "";
+ var answer = prompt("What is your guess");
+  if (answer =="youtube") { 
+  correct = correct + 1;
+    document.getElementById("butt").innerHTML = "<button onclick='done()'>Finish</button";
+  }
+  if (answer != "youtube"){
+document.getElementById("butt").innerHTML = "<button onclick='done()'>Finish</button>";
+  }
+}
+//complete
+
+//right or wrong
+
+ function done(){
+   document.getElementById("all").innerHTML = "";
+   document.getElementById("scores").innerHTML = "<center><button onclick='score()'>Get your score</button><br><br><br><h1 id='writscore'></h1></center>";
+ }
+var u = "You got ";
+var o = " out of 10";
+function score(){
+  alert(u + correct + o);
+  document.getElementById("writscore").innerHTML = (u+correct+o);
+  if (correct >5) { 
+  alert("You got over 50% good job");
+  }
+  if (correct <= 5){
+alert("You failed logo school!");
+  }
+}
+
+
+
+
+
+
+
+
+
+
+</script>
+      <script type="text/javascript" src="script.js"></script>
+    </body>
+</html>
